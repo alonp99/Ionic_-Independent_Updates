@@ -1,0 +1,19 @@
+<ion-view view-title="Update">
+  <ion-content>
+    <ion-list>
+    <p> Current Version: </p>
+    <p> {{curVersion}} </p>
+    <p> {{someString}} </p>
+    <button class="button icon ion-ios-arrow-thin-down button-full button-stable" ng-click="update()">
+    	Update
+    </button>
+    
+                <button class="button" ng-click="download()">Download</button>
+                <button class="button" ng-click="load()">Load</button>
+                <p> Available Updates: </p></br>
+                <button class="button" ng-click="downloadUpdate(update_info[0])">{{update_info[0].ver}}</button>
+                <img ng-src="{{imgFile}}">
+            
+    </ion-list>
+  </ion-content>
+</ion-view>

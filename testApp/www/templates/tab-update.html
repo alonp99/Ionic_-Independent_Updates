@@ -1,0 +1,24 @@
+        <ion-view view-title="Update">
+        <ion-content>
+        <ion-list>
+            
+            <p> Current Version: {{curVersion}} </p>
+           
+            <!-- <p> {{someString}} </p> -->
+            <button class="button icon button-stable button-full " ng-click="update()">
+            	Check For Updates
+            </button>
+            <button class="button icon button-stable button-full " ng-click="restoreVerVar()">
+                Back to v1000
+            </button>
+            
+
+            <p> {{newUpdates}} </p></br>
+            <div ng-repeat="update in update_info" ng-if="update.ver > curVersion"> 
+                <button class="button button-outline button-positive ion-ios-arrow-thin-down button-full " ng-click="downloadUpdate(update)">Ver.{{update.ver}}</button>
+            </div>
+
+
+        </ion-list>
+    </ion-content>
+</ion-view>
